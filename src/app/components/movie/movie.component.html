@@ -1,0 +1,21 @@
+<div [ngClass]="movie.isDetailed?'detailed-card':'card'">
+  <img [src]="movie.Poster" alt="Avatar" class="poster">
+  <div class="container">
+    <div [ngClass]="movie.isDetailed?'detailed-movie-data':'movie-data'">
+      <h4><b>{{movie.Title}}</b></h4>
+      <div class="extra-details" *ngIf='movie.isDetailed'><div>
+        <span>Plot</span>
+        <hr>
+        <span class="sub-details">{{movie.Plot}}</span>
+      </div></div>
+
+    </div>
+    <div [ngClass]="movie.isDetailed?'detailed-card-footer':'card-footer'">
+      <div><p>{{movie.Year}}</p></div>
+      <div class="spacer"></div>
+      <div>
+        <input type="button" class="default-button" (click)="getMovieDetails.emit(movie.imdbID)" value="DETAILS" />
+      </div>
+  </div>
+  </div>
+</div>

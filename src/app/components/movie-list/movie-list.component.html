@@ -1,0 +1,20 @@
+<div *ngIf='movieList && movieList.length==0 && !isHavingASearchedText' class="horizontal-bar">Welcome to OMDB Search, search something in the
+  bar above</div>
+<div *ngIf='error !=""' class="horizontal-bar-red">Movies not found!</div>
+<div *ngIf="movieList && movieList.length>0">
+  <div class="search-result-pagination">
+    <div class="horizontal-bar"><span>Total no of movies found : {{searchResultCount}}</span></div>
+    <div class="spacer"></div>
+    <div class="pagination-container">
+      <div class="pagination">
+        <a class="active" href="#" (click)="goToFirstPage.emit(true)">&laquo;</a>
+        <a class="active" href="#" (click)="goToPreviousPage.emit(true)">&lt;</a>
+        <a class="active" href="#" (click)="goToNextPage.emit(true)">&gt;</a>
+        <a class="active" href="#" (click)="goToLastPage.emit(true)">&raquo;</a>
+      </div>
+    </div>
+  </div>
+  <div *ngFor="let movie of movieList" class="movie-list">
+    <app-movie [movie]="movie" (getMovieDetails)="onGetMovieDetails($event)"></app-movie>
+  </div>
+</div>

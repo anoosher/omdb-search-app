@@ -1,0 +1,66 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 360px;
+  float: left;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  float:right;
+}
+
+.poster{
+  width:180px;
+  height: 240px;
+}
+
+.movie-data
+{
+  width: 148px;
+  float:inline-end;
+}
+
+.detailed-movie-data
+{
+  width: 444px;
+  float:inline-end;
+}
+
+.card-footer
+{
+  width: 148px;
+  display: flex;
+  border-top: solid rgba(110, 103, 103, 0.2) 1px;
+  margin-bottom: 5px;
+}
+
+.detailed-card-footer
+{
+  width: 444px;
+  display: flex;
+  border-top: solid rgba(110, 103, 103, 0.2) 1px;
+  margin-bottom: 5px;
+}
+
+.detailed-card
+{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 720px;
+  float: left;
+}
+
+.sub-details
+{
+  width: 296px;
+}
+
+.spacer {
+  flex: 1;
+}
+

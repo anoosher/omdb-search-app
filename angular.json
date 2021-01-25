@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "omdb-search-app"
+    }
+  },
+  "defaultProject": "omdb-search-app",
+  "cli": {
+    "analytics": false
+  }
 }
